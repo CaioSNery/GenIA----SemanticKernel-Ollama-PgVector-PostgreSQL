@@ -20,9 +20,9 @@ O projeto mostra como transformar dados simples de produtos em uma base intelige
 - **.NET / C#**
 - **Semantic Kernel**
 - **Ollama ou OpenAI** (LLM)
-- **pgvector** ou outro banco vetorial
-- **Embeddings** (nomic-embed, text-embedding-3-small, mistral-embed)
-- **Console ou API REST** para demonstração
+- **pgvector** Suporte para vetores, **pgAdmin4** interface, rodando em docker ambos
+- **Embeddings** (mxbai-embed-large)
+- **Minimal API** para demonstração
 
 ---
 
