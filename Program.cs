@@ -54,8 +54,20 @@ app.MapPost("/v1/products", async (
     AppDbContext db,
     OllamaApiClient ollamaClient) =>
 {
-    var textEmbeddingGenerationService = ollamaClient.AsTextEmbeddingGenerationService();
-    var embeddings = await textEmbeddingGenerationService.GenerateEmbeddingAsync(model.Category);
+    var product= new Product
+    {
+        Id=23,
+        Title=model.Title,
+        Category=model.Category,
+        Summary=model.Summary,
+        Description=model.Description
+
+    };
+
+    await db.Products.AddAsync(product);
+
+    var service = ollamaClient.AsTextEmbeddingGenerationService();
+    var embeddings = await service.GenerateEmbeddingAsync(model.Category);
 
     var recomendation = new Recomendation
     {
@@ -75,10 +87,11 @@ app.MapPost("/v1/prompt", async (
     AppDbContext db,
     OllamaApiClient ollamaClient) =>
 {
-    var textEmbeddingGenerationService = ollamaClient.AsTextEmbeddingGenerationService();
-    var embeddings = await textEmbeddingGenerationService.GenerateEmbeddingAsync(model.Prompt);
+    var service = ollamaClient.AsTextEmbeddingGenerationService();
+    var embeddings = await service.GenerateEmbeddingAsync(model.Prompt);
 
     var recomendations = await db.Recomendations
+        .AsNoTracking()
         .OrderBy(d => d.Embedding.CosineDistance(new Vector(embeddings.ToArray())))
         .Take(3)
         .Select(x => new
