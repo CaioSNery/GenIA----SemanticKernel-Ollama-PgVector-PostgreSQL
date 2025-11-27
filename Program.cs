@@ -22,7 +22,6 @@ builder.Services.AddTransient<OllamaApiClient>(x => new OllamaApiClient(
 
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
 
 app.MapGet("/v1/seed", async (
     AppDbContext db,
@@ -83,7 +82,7 @@ app.MapPost("/v1/products", async (
 });
 
 app.MapPost("/v1/prompt", async (
-    QuestionViewModel model,
+    QuestionRequest model,
     AppDbContext db,
     OllamaApiClient ollamaClient) =>
 {
