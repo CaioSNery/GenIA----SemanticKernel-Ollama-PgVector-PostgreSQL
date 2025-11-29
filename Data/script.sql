@@ -16,46 +16,111 @@ CREATE TABLE products (
       description TEXT NOT NULL
 );
 
-insert into products values(1, 'Brazilian Coffee', 'robust', 'One of the most popular coffees in the world', 'Brazilian coffee is famous for its balanced and approachable flavors. Most Brazilian beans lean towards a mild, nutty taste with hints of chocolate. Some regions, like Minas Gerais, produce coffee with a sweet, nutty profile, while areas like Bahia are known for their fruity, lively notes.')
+INSERT INTO products VALUES
+(1, 'Café Brasileiro', 'robusto', 'Um dos cafés mais populares do mundo', 
+'Café brasileiro é famoso por seus sabores equilibrados e agradáveis. 
+A maioria dos grãos brasileiros tende a ter um sabor suave, com notas de chocolate e castanhas. 
+Regiões como Minas Gerais produzem cafés com perfil doce e amanteigado, enquanto áreas como a Bahia são conhecidas por notas frutadas e vibrantes.');
 
 INSERT INTO products (id, title, category, summary, description) VALUES
-    (2, 'Colombian Coffee', 'robust', 'Known for its balanced, smooth flavor and rich aroma', 'Colombian coffee is celebrated for its well-rounded flavor profile. It often features a smooth, medium body with a bright acidity and notes of citrus or red berries. The country''s diverse geography allows for a wide range of flavor nuances, from the caramel sweetness of the Antioquia region to the vibrant fruitiness of Huila.');
+(2, 'Café Colombiano', 'robusto', 
+'Conhecido pelo sabor equilibrado, suave e aroma rico', 
+'O café colombiano é celebrado por seu perfil de sabor bem equilibrado. 
+Normalmente apresenta corpo médio, acidez brilhante e notas de frutas cítricas ou vermelhas. 
+A geografia diversa do país permite nuances variadas, como a doçura caramelizada da região de Antioquia e a frutuosidade vibrante de Huila.');
 
-INSERT INTO products (id, title, category, summary, description) VALUES
-    (3, 'Ethiopian Yirgacheffe', 'robust', 'A floral and citrusy coffee with a light body', 'Yirgacheffe coffee is a true gem of the coffee world. It is a wet-processed coffee with a distinctively clean, light body and a tea-like quality. Its flavor notes are predominantly floral, often with jasmine and bergamot, and a bright, citrusy acidity. It is known for its delicate and complex character.');
+INSERT INTO products VALUES
+(3, 'Etíope Yirgacheffe', 'robusto', 
+'Um café floral e cítrico com corpo leve', 
+'Yirgacheffe é considerado uma joia no mundo do café. 
+É um café processado via lavagem, com corpo leve e uma qualidade semelhante ao chá. 
+Suas notas de sabor são predominantemente florais, como jasmim e bergamota, com acidez brilhante e cítrica. 
+É conhecido por seu caráter delicado e complexo.');
 
-INSERT INTO products (id, title, category, summary, description) VALUES
-    (4, 'Kenyan AA', 'soft', 'A vibrant coffee with bold fruit and wine notes', 'Kenyan coffee is highly sought after for its complex and lively flavor. The AA grade indicates a large bean size, often associated with higher quality. This coffee is known for its bright, sparkling acidity, full body, and rich, wine-like flavors, including notes of blackcurrant, tomato, and citrus. It has a powerful and memorable taste.');
+INSERT INTO products VALUES
+(4, 'Quênia AA', 'suave', 
+'Um café vibrante com notas frutadas e vínicas', 
+'O café queniano é altamente valorizado por sua complexidade e sabores vivos. 
+A classificação AA indica grãos maiores, geralmente associados a maior qualidade. 
+Esse café apresenta acidez brilhante, corpo encorpado e notas que lembram vinho, como groselha, tomate e frutas cítricas.');
 
-INSERT INTO products (id, title, category, summary, description) VALUES
-    (5, 'Sumatra Mandheling', 'soft', 'A full-bodied and earthy coffee from Indonesia', 'Sumatra Mandheling is renowned for its low acidity and heavy, syrupy body. This coffee has a unique flavor profile that is earthy and rustic, often with notes of chocolate, tropical fruit, and a distinct forest floor aroma. It is often wet-hulled, a process that gives it a signature earthy, spicy character and a smooth finish.');
+INSERT INTO products VALUES
+(5, 'Sumatra Mandheling', 'suave', 
+'Um café encorpado e terroso da Indonésia', 
+'Sumatra Mandheling é famoso pela baixa acidez e corpo denso e licoroso. 
+Possui um perfil de sabor único, terroso e rústico, com notas de chocolate, frutas tropicais e um aroma característico de floresta úmida. 
+Geralmente é processado via método wet-hulled, que contribui para seu sabor terroso e final suave.');
 
-INSERT INTO products (id, title, category, summary, description) VALUES
-    (6, 'Costa Rican Tarrazu', 'intense', 'A clean, crisp coffee with a classic balance', 'Tarrazu coffee is a high-altitude bean from Costa Rica, known for its superb quality and clean taste. It has a medium body, a delicate, bright acidity, and a smooth, mellow finish. Flavor notes typically include brown sugar, citrus, and hints of tropical fruit. It is a quintessential Central American coffee.');
+INSERT INTO products VALUES
+(6, 'Costa Rica Tarrazú', 'intenso', 
+'Um café limpo, brilhante e equilibrado', 
+'O café Tarrazú, cultivado em grandes altitudes na Costa Rica, é conhecido por sua qualidade superior e sabor limpo. 
+Possui corpo médio, acidez delicada e brilhante, e final suave. 
+Notas comuns incluem açúcar mascavo, frutas cítricas e toques de frutas tropicais.');
 
-INSERT INTO products (id, title, category, summary, description) VALUES
-    (7, 'Guatemalan Antigua', 'soft', 'A full-bodied coffee with a smoky, chocolatey flavor', 'Antigua coffee from Guatemala is grown in a volcanic region, which contributes to its rich, full-bodied character. It has a high-quality reputation, offering a complex flavor profile with notes of chocolate, spice, and a subtle smoky aroma. The acidity is bright and pleasant, and the finish is often spicy and prolonged.');
+INSERT INTO products VALUES
+(7, 'Guatemala Antigua', 'suave', 
+'Um café encorpado com sabor achocolatado e defumado', 
+'O café Antigua é cultivado em uma região vulcânica da Guatemala, o que confere um sabor rico e encorpado. 
+Seu perfil inclui notas de chocolate, especiarias e um aroma sutilmente defumado. 
+Possui acidez brilhante e final prolongado com toque picante.');
 
-INSERT INTO products (id, title, category, summary, description) VALUES
-    (8, 'Jamaican Blue Mountain', 'robust', 'One of the world''s most rare and expensive coffees', 'Jamaican Blue Mountain coffee is famous for its mild flavor and lack of bitterness. It has a well-balanced body, a clean, sweet taste, and a very smooth finish. Its flavor profile is often described as having notes of nuts and herbs, with a subtle sweetness. It is considered a premium, luxury coffee.');
+INSERT INTO products VALUES
+(8, 'Jamaicano Blue Mountain', 'robusto', 
+'Um dos cafés mais raros e caros do mundo', 
+'O café Blue Mountain é conhecido por seu sabor suave e ausência de amargor. 
+Possui corpo equilibrado, sabor limpo e doce e final extremamente suave. 
+É frequentemente descrito com notas de castanhas e ervas. 
+É considerado um café de luxo e altíssima qualidade.');
 
-INSERT INTO products (id, title, category, summary, description) VALUES
-    (9, 'Hawaiian Kona', 'intense', 'A rare, delicate coffee with a smooth, bright flavor', 'Kona coffee is grown on the slopes of the Mauna Loa and Hualalai volcanoes in Hawaii. It is a smooth, light-bodied coffee with a complex aroma and a crisp, clean taste. Its flavor profile includes notes of milk chocolate, nuts, and fruit, with a low acidity and a sweet finish. It is prized for its rarity and consistent quality.');
+INSERT INTO products VALUES
+(9, 'Havaiano Kona', 'intenso', 
+'Um café raro e delicado, com sabor suave e brilhante', 
+'O café Kona é cultivado nas encostas dos vulcões Mauna Loa e Hualalai no Havaí. 
+É um café suave, de corpo leve, com aroma complexo e sabor limpo. 
+Notas incluem chocolate ao leite, castanhas e frutas, com baixa acidez e final doce. 
+É valorizado por sua raridade e qualidade consistente.');
 
-INSERT INTO products (id, title, category, summary, description) VALUES
-    (10, 'Vietnamese Robusta', 'intense', 'A strong, bold coffee with a high caffeine content', 'Robusta coffee from Vietnam is known for its powerful, full-bodied taste and is a staple in Vietnamese coffee culture. It has a nutty and chocolatey profile, with notes of caramel and a strong, bitter aftertaste. It is often prepared using a phin filter, resulting in a thick and intense brew, commonly served with sweetened condensed milk.');
+INSERT INTO products VALUES
+(10, 'Robusta Vietnamita', 'intenso', 
+'Um café forte, encorpado e com alto teor de cafeína', 
+'O café robusta do Vietnã é conhecido por seu sabor intenso e encorpado, sendo essencial na cultura de café vietnamita. 
+Apresenta perfil achocolatado e amanteigado, com notas de caramelo e um retrogosto amargo e marcante. 
+Costuma ser preparado em filtro phin, resultando em uma bebida espessa, muitas vezes servida com leite condensado.');
 
-INSERT INTO products (id, title, category, summary, description) VALUES
-    (11, 'Tanzanian Peaberry', 'arabic', 'A bright, lively coffee with citrus and berry notes', 'Tanzanian Peaberry is a unique coffee where the cherry produces a single, round bean instead of two flat ones. This is believed to concentrate the flavor. The resulting cup has a rich, medium body with a vibrant, wine-like acidity. Flavor notes often include citrus, blackcurrant, and hints of cedar, offering a bright and sophisticated experience.');
+INSERT INTO products VALUES
+(11, 'Tanzânia Peaberry', 'arábica', 
+'Um café vibrante com notas cítricas e frutadas', 
+'Tanzânia Peaberry é um tipo raro em que a cereja do café produz um único grão arredondado, concentrando mais sabor. 
+Possui corpo médio, acidez brilhante e notas de cítricos, groselha e toques de cedro. 
+Entrega uma xícara elegante e brilhante.');
 
-INSERT INTO products (id, title, category, summary, description) VALUES
-    (12, 'Yemeni Mokha', 'arabic', 'One of the oldest and most historical coffees', 'Yemeni Mokha coffee has a distinct, rustic flavor profile. It has a full body and a deep, complex taste with notes of chocolate, fruit, and spice. The processing method, drying the cherries on rooftops, gives it a unique, earthy quality. It is known for its wild, untamed flavor and rich history, named after the port of Mokha.');
+INSERT INTO products VALUES
+(12, 'Iêmen Mokha', 'arábica', 
+'Um dos cafés mais antigos e históricos do mundo', 
+'O café Mokha do Iêmen possui sabor rústico e distinto. 
+Tem corpo encorpado e sabor profundo e complexo, com notas de chocolate, frutas e especiarias. 
+O processo de secagem em telhados confere um caráter terroso único. 
+É conhecido por seu sabor selvagem e história centenária.');
 
-INSERT INTO products (id, title, category, summary, description) VALUES
-    (13, 'Burundi Coffee', 'arabic', 'A sweet and floral coffee with a clean finish', 'Burundi coffee is gaining popularity for its excellent quality. Grown at high altitudes, it has a clean and bright profile. The flavor often includes notes of floral honey, citrus, and red berries, with a delicate acidity and a medium body. It offers a sweet and pleasant cup that is very approachable.');
+INSERT INTO products VALUES
+(13, 'Burundi', 'arábica', 
+'Um café doce, floral e com final limpo', 
+'O café do Burundi está ganhando destaque por sua excelente qualidade. 
+Cultivado em grandes altitudes, possui perfil limpo e brilhante. 
+Notas comuns incluem mel floral, cítricos e frutas vermelhas, com acidez delicada e corpo médio.');
 
-INSERT INTO products (id, title, category, summary, description) VALUES
-    (14, 'Ethiopian Harrar', 'arabic', 'A wild, fruit-forward coffee with a complex profile', 'Ethiopian Harrar is a dry-processed coffee with a strong, fruity flavor. It has a heavy body and a low acidity, with a taste that is often described as wild and complex. Common notes include blueberries, cocoa, and spices. It is a bold and rustic coffee that stands out with its unique, naturally fruity taste.');
+INSERT INTO products VALUES
+(14, 'Etíope Harrar', 'arábica', 
+'Um café frutado, selvagem e com perfil complexo', 
+'O café Harrar, da Etiópia, é seco ao sol e apresenta sabor frutado intenso. 
+Possui corpo pesado, baixa acidez e sabor descrito como selvagem e complexo. 
+Notas incluem mirtilo, cacau e especiarias. 
+É um café marcante e naturalmente frutado.');
 
-INSERT INTO products (id, title, category, summary, description) VALUES
-    (15, 'Indian Monsooned Malabar', 'intense', 'A coffee with a unique, earthy, and nutty character', 'Monsooned Malabar coffee is a specialty of the Malabar Coast of India. The beans are exposed to monsoon winds and rain for several months, which causes them to swell and lose their original acidity. The resulting coffee is very low in acidity with a unique, heavy body and a pungent, earthy, and nutty flavor.');
+INSERT INTO products VALUES
+(15, 'Indiano Monsooned Malabar', 'intenso', 
+'Um café com caráter único, terroso e amendoado', 
+'O Monsooned Malabar é típico da Costa de Malabar, na Índia. 
+Os grãos são expostos aos ventos de monções, fazendo com que inchem e percam acidez. 
+O resultado é um café de baixíssima acidez, corpo pesado e sabor terroso e amendoado, com aroma pungente e característica singular.');
