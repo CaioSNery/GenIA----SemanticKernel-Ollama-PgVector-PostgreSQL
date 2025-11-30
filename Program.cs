@@ -4,6 +4,7 @@ using Demo7.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.SemanticKernel.Embeddings;
 using OllamaSharp;
+using OllamaSharp.Models;
 using Pgvector;
 using Pgvector.EntityFrameworkCore;
 
@@ -53,13 +54,13 @@ app.MapPost("/v1/products", async (
     AppDbContext db,
     OllamaApiClient ollamaClient) =>
 {
-    var product= new Product
+    var product = new Product
     {
-        Id=23,
-        Title=model.Title,
-        Category=model.Category,
-        Summary=model.Summary,
-        Description=model.Description
+        Id = 23,
+        Title = model.Title,
+        Category = model.Category,
+        Summary = model.Summary,
+        Description = model.Description
 
     };
 
@@ -95,11 +96,49 @@ app.MapPost("/v1/prompt", async (
         .Take(3)
         .Select(x => new
         {
-            x.Title, x.Category
+            x.Title,
+            x.Category
         })
         .ToListAsync();
 
-    return Results.Ok(recomendations);
+    var context = string.Join("\n", recomendations.Select(r => $"- {r.Title} ({r.Category})"));
+
+    var prompt = $@"Você deve responder APENAS com base no CONTEXTO abaixo.
+         Se a resposta não estiver presente no contexto, diga:
+         Não encontrei informações suficientes no contexto.'
+
+         NÃO invente informações.
+         NÃO complete lacunas.
+         NÃO faça suposições.
+
+         CONTEXT:
+        {context}
+
+        QUESTION:
+        {model.Prompt}
+
+         Responda de forma objetiva e fiel ao contexto acima.";
+
+    var request = new GenerateRequest
+    {
+        Model = "llama3.1:latest",
+        Prompt = prompt
+    };
+
+    string answer = "";
+
+    await foreach (var msg in ollamaClient.GenerateAsync(request))
+    {
+        if (msg != null && msg.Response != null)
+            answer += msg.Response;
+    }
+
+    return Results.Ok(new
+    {
+        recomendations,
+        answer
+    });
+
 });
 
 app.Run();
