@@ -1,7 +1,7 @@
 
 namespace Demo7.ViewModels
 {
-    public record CreateProductViewModel(string Title,
+    public record CreateProduct(string Title,
      string Category,
       string Summary, 
       string Description);

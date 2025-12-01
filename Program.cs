@@ -51,7 +51,7 @@ app.MapGet("/v1/seed", async (
 });
 
 app.MapPost("/v1/products", async (
-    CreateProductViewModel model,
+    CreateProduct model,
     AppDbContext db,
     OllamaApiClient ollamaClient) =>
 {
