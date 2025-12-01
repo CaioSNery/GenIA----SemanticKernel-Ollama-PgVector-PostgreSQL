@@ -9,6 +9,7 @@ using Pgvector;
 using Pgvector.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -46,7 +47,7 @@ app.MapGet("/v1/seed", async (
         await db.SaveChangesAsync();
     }
 
-    return Results.Ok(new { message = "Seeded" });
+    return Results.Ok(new { message = "OK" });
 });
 
 app.MapPost("/v1/products", async (
